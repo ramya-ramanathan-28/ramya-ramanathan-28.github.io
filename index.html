@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(90deg, #f8f9fc 0%, #f4f4f8 100%);
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: black;
+      background-color: #263145;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      font-size: 1rem;
+    }
+    nav a {
+      color: #aad8ff;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background-color: #465775;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0.2rem 0;
+      font-weight: 700;
+    }
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .pill-group span {
+      background-color: #e0e4ec;
+      color: #2d2d2d;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+    section {
+      padding: 3rem 6%;
+      background: #fff;
+      border-radius: 1rem;
+      margin: 2.5rem auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 20px rgba(30, 90, 150, 0.15);
+    }
+    h2 {
+      color: #1d3557;
+      font-size: 2rem;
+      border-bottom: 2px solid #cfd8dc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .experience-entry {
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #fdfdfd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .achievement-entry, .project-entry {
+      margin-bottom: 1rem;
+      padding-left: 0;
+      list-style: none;
+    }
+    .achievement-entry img.icon,
+    .project-entry img.icon, .hackathon-project-entry img.icon{
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      filter: grayscale(100%) brightness(0%) sepia(100%) hue-rotate(180deg) saturate(400%) contrast(90%);
+    }
+    .footer {
+      background-color: #465775;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-entry{
+      border: 1px solid #e2e8f0; 
+      border-radius: 0.75rem;
+       padding: 1rem; 
+       margin: 1rem auto; 
+       max-width: 1000px; 
+       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    html {
+        scroll-behavior: smooth;
+    }  
+  </style>
+</head>
+<body>
+  <nav>
+    <div style="font-size: 1.4rem; font-weight: 300;"><strong>Ramya Ramanathan</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+       <a href="#education">Education</a>
+       <a href="#publications">Publications</a>
+       <a href="#leadership">Leadership</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <section id="about">
+  <h2>About Me</h2>
+  <p>I am a systems-focused software engineer with deep expertise in building performant and reliable backend infrastructures. My core strengths lie in database internals, SQL query optimization, storage architecture, and distributed systems. At Microsoft, I’ve contributed to core enhancements in the SQL Server query engine, optimizing performance across thousands of databases in production environments.</p>
+  <p>I hold an M.S. in Computational Data Science from Carnegie Mellon University, where I specialized in systems-level design, cloud computing, and large-scale data engineering. My academic and professional work spans buffer pool managers, fault-tolerant consensus protocols, stream processing engines, and intelligent diagnostics tooling. I thrive at the intersection of scalability, system observability, and performance engineering—designing solutions that are as robust as they are impactful.</p>
+  </section>
+
+  <section id="skills">
+  <h2>Skills</h2>
+  <style>
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .pill-group span {
+      background-color: #e0e4ec;
+      color: #2d2d2d;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+  </style>
+  <div>
+    <h4>Languages</h4>
+    <div class="pill-group">
+      <span>C++</span><span>C#</span></span><span>Go</span><span>Java</span><span>C</span><span>SQL</span><span>Python</span>
+    </div>
+    <h4>Systems Technologies</h4>
+    <div class="pill-group">
+      <span>Kafka</span><span>Kubernetes</span><span>Apache Spark</span><span>MySQL</span><span>Redis</span><span>gRPC</span>
+      <span>Query Optimization</span><span>Distributed Systems</span><span>Storage Systems</span><span>Database Internals</span>
+    </div>
+    <h4>Backend & APIs</h4>
+    <div class="pill-group">
+      <span>Flask</span><span>REST APIs</span><span>Microservices</span><span>Node.js</span>
+    </div>
+    <h4>Cloud & DevOps</h4>
+    <div class="pill-group">
+      <span>Kubernetes</span><span>Docker</span><span>CI/CD</span><span>Linux</span><span>Shell Scripting</span><span>Azure</span>
+    </div>
+    <h4>Data Engineering & Processing</h4>
+    <div class="pill-group">
+      <span>ETL</span><span>Apache Spark</span><span>Hadoop</span><span>Kafka</span><span>Samza</span>
+    </div>
+    <h4>Tools & Platforms</h4>
+    <div class="pill-group">
+      <span>Git</span><span>Visual Studio</span><span>PyTorch</span><span>TensorFlow</span>
+    </div>
+    <h4>Machine Learning & NLP</h4>
+    <div class="pill-group">
+      <span>Scikit-learn</span><span>TensorFlow</span><span>Keras</span><span>BERT</span><span>Transfer Learning</span><span>Text Classification</span>
+    </div>
+    <h4>Frontend</h4>
+    <div class="pill-group">
+      <span>HTML</span><span>CSS</span><span>React</span><span>Redux</span><span>Webpack</span>
+    </div>
+  </div>
+</section>
+</section>
+
+  
+
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="experience-entry" style="display: flex; align-items: flex-start;">
+  <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft logo" style="width: 24px; height: 24px; margin-right: 0.75rem; margin-top: 0.6rem; vertical-align: middle;">
+  <div class="experience-text">
+      <p><strong>Microsoft SQL Server Query Processing - Software Engineer</strong> (Feb 2023 – Present)</p>
+      <ul>
+        <li>Engineered cost-based predicate selection for Parameter Sensitive Plan optimization across 36,000+ databases.</li>
+        <li>Created workload simulation tools using Query Store history for regression testing.</li>
+        <li>Developed query hints to prevent repeated expensive executions, boosting system stability.</li>
+        <li>Led supportability enhancements for Optional Parameter Plans with config toggles and telemetry.</li>
+        <li>Resolved 20+ high-priority customer issues including query plan cycles and stack overflows.</li>
+        <li>Handled production on-call, resolved critical escalations, and improved diagnostic tooling.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="experience-entry" style="display: flex; align-items: flex-start;">
+  <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft logo" style="width: 24px; height: 24px; margin-right: 0.75rem; margin-top: 0.6rem; vertical-align: middle;">
+  <div class="experience-text">
+      <p><strong>Microsoft SharePoint Search Customization - Software Engineer</strong> (Jul 2019 – May 2021)</p>
+      <ul>
+        <li>Refactored Microsoft Designer frontend to use Redux, improving load time by 9 seconds.</li>
+        <li>Streamlined Admin Portal telemetry, reducing setup time by ~16%.</li>
+        <li>Delivered extensible state management architecture and improved package maintainability.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="experience-entry" style="display: flex; align-items: flex-start;">
+  <img src="https://logo.clearbit.com/ibm.com" alt="IBM logo" style="width: 24px; height: 24px; margin-right: 0.75rem; margin-top: 0.6rem; vertical-align: middle;">
+    <div class="experience-text">
+      <p><strong>IBM Analytics Engine - Software Engineering Intern</strong> (Jan 2019 – Jun 2019)</p>
+      <ul>
+        <li>Built a Kubernetes-based job submission engine replacing YARN for Spark jobs.</li>
+        <li>Reduced job startup time by 8 seconds; improved job throughput by 2%.</li>
+        <li>Implemented a machine learning-based resource prediction system to optimize provisioning.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="experience-entry" style="display: flex; align-items: flex-start;">
+    <img src="https://logo.clearbit.com/cisco.com" alt="Cisco logo" class="icon" style="width: 24px; height: 24px; margin-right: 0.75rem; margin-top: 0.6rem; vertical-align: middle;">
+    <div class="experience-text">
+      <p><strong>Cisco – Research Intern</strong> (Aug 2018 – Mar 2019)</p>
+      <ul>
+        <li>Built a crawler and NLP-based classifier to identify trending technical initiatives in Cisco community forums.</li>
+        <li>Conducted sentiment analysis using transfer learning models to summarize user discussions.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="experience-entry" style="display: flex; align-items: flex-start;">
+  <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft logo" style="width: 24px; height: 24px; margin-right: 0.75rem; margin-top: 0.6rem; vertical-align: middle;">
+    <div class="experience-text">
+      <p><strong>Microsoft Sales & Marketing - Software Engineering Intern</strong> (Jun 2018 – Jul 2018)</p>
+      <ul>
+        <li>Developed a fuzzy logic-based lead-to-product matching system using big data pipelines.</li>
+        <li>Improved match quality by tuning thresholds and enabling batching for 1TB-scale datasets.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="experience-entry" style="display: flex; align-items: flex-start;">
+  <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft logo" style="width: 24px; height: 24px; margin-right: 0.75rem; margin-top: 0.6rem; vertical-align: middle;">
+    <div class="experience-text">
+      <p><strong>Microsoft Azure Networking - Software Engineering Intern</strong> (May 2017 – Jul 2017)</p>
+      <ul>
+        <li>Visualized network topology changes and developed alerts for malfunctioning configurations.</li>
+        <li>Enabled proactive detection and correction of infrastructure faults over time.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="projects" style="text-align: center;">
+  <h2>Selected Projects</h2>
+<h3>Database & Storage Systems</h3>
+
+    <div class="project-entry">
+      <p><img src="https://img.icons8.com/ios-filled/50/000000/brain.png" alt="Brain" class="icon"><strong>BusTub Database</strong> – Disk-based DBMS with buffer pool manager, LRU-K eviction, and optimizer rules.<br/>
+      <em>Skills:</em> C++, Database Internals, Storage Design</p>
+    </div>
+    <div class="project-entry" >
+      <p><img src="https://img.icons8.com/ios-filled/50/000000/flash-on.png" alt="Flash" class="icon"><strong>Flash Translation Layer</strong> – SSD manager with wear leveling, mapping, and garbage collection.<br/>
+      <em>Skills:</em> Storage Systems, C++, SSD Optimization</p>
+    </div>
+  <div class="project-entry">
+  <p><img src="https://img.icons8.com/ios-filled/50/000000/database.png" alt="Database" class="icon">
+  <strong>Cab Matching with Kafka & Samza</strong> – Stream-processed driver and client location data to identify optimal matches based on proximity and ratings.<br/>
+  <em>Skills:</em> Kafka, Apache Samza, Stream Processing, Matching Algorithms</p>
+</div>
+  <div class="project-group">
+    <h3>Distributed Systems</h3>
+    <div class="project-entry">
+      <p><img src="https://img.icons8.com/ios-filled/50/000000/database.png" alt="Database" class="icon"><strong>Distributed Key-Value Store</strong> – Sharded store using consistent hashing and a low-latency caching layer.<br/>
+      <em>Skills:</em> Go, RPC, Distributed Systems, Caching</p>
+    </div>
+    <div class="project-entry">
+      <p><img src="https://img.icons8.com/ios-filled/50/000000/puzzle.png" alt="Puzzle" class="icon"><strong>Raft Consensus Algorithm</strong> – Fault-tolerant replicated state machine using quorum consensus.<br/>
+      <em>Skills:</em> Golang, Raft Protocol, Fault Tolerance, Synchronization</p>
+    </div>
+    <div class="project-entry">
+      <p><img src="https://img.icons8.com/ios-filled/50/000000/satellite.png" alt="Satellite" class="icon"><strong>Distributed Task Scheduler</strong> – Reliable UDP protocol and distributed task load balancer.<br/>
+      <em>Skills:</em> Networking, Concurrency, Scheduling, Systems Programming</p>
+    </div>
+  </div>
+  <div class="project-group">
+    
+  </div>
+
+  <div class="project-group">
+    <h3>Scalable Backend & Cloud</h3>
+    <div class="project-entry">
+      <p><img src="https://img.icons8.com/ios-filled/50/000000/artificial-intelligence.png" alt="AI" class="icon"><strong>Twitter Recommender System</strong> – Microservice with ETL pipelines, deployed with autoscaling on Kubernetes.<br/>
+      <em>Skills:</em> Python, MySQL, ETL, Kubernetes, Load Balancing</p>
+    </div>
+  </div>
+  
+</section>
+<section>
+  <h2>Hackathon Projects</h2>
+  <ul class="hackathon-project-entry" style="list-style: none; padding-left: 0;">
+    <style>
+      .project-entry img.icon {
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        filter: grayscale(100%) brightness(0%) sepia(100%) hue-rotate(180deg) saturate(400%) contrast(90%);
+      }
+    </style>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/rocket.png" alt="Rocket" class="icon"><strong>Seeing AI – Microsoft Global Hackathon</strong>: Developed a hands-free flowchart creation tool for the visually impaired with anomaly detection and alt text download. Released as part of the Seeing AI product.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/compass.png" alt="Compass" class="icon"><strong>Be Prepared – Microsoft Hackathon</strong>: Designed a knowledge mining tool to find internal experts and documents based on key phrase extraction and cluster detection.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/maintenance.png" alt="Wrench" class="icon"><strong>Fix Hack Learn – Microsoft</strong>: Received Corporate VP and People’s Choice Awards for an impactful internal diagnostic tool innovation.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/planet-earth.png" alt="Earth" class="icon"><strong>Post-Disaster Relief System – IBM Call for Code</strong>: Built a system using satellite imagery and social media to identify hot zones, plan drone delivery, and suggest relief camp locations. Placed 1st nationally, Top 5 globally.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/glasses.png" alt="Glasses" class="icon"><strong>Vision Assist – IBM IoT Hackathon</strong>: Created wearable object recognition gear to aid the visually impaired using Faster R-CNN. Won 1st place.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/musical-notes.png" alt="Music" class="icon"><strong>MoodSeek & BollyBuff – IBM Mega Hackathon</strong>: Built an emotion-based music playlist generator and Bollywood movie discovery engine. Won Best Team and Girls' Team awards.</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" alt="Search" class="icon"><strong>Through Our Eyes – Microsoft code.fun.do</strong>: Designed an immersive visual accessibility tool. Placed 3rd regionally.</li>
+    
+  </ul>
+  </section>
+<section id="achievements">
+  <h2>Achievements</h2>
+  <ul class="achievement-entry" style="list-style: none; padding-left: 0;">
+    <style>
+      .achievement-entry img.icon {
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        filter: grayscale(100%) brightness(0%) sepia(100%) hue-rotate(180deg) saturate(400%) contrast(90%);
+      }
+    </style>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/trophy.png" class="icon"><strong>Capstone Award: Mentor's Choice</strong> – Runner-up award in the mentor's favorite category for the Capstone Project: Data Augmentation for Information Retrieval (CMU, Dec 2022).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/conference.png" class="icon"><strong>Grace Hopper Conference Sponsorship</strong> – Represented Carnegie Mellon University at GHC in person, selected among 10 students sponsored by the School of Computer Science (Sep 2022).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/medal-second-place.png" class="icon"><strong>FHL Fall 2020 Winner</strong> – Winner of Fall 2020 Fix Hack Learn for project "Hey Visio" (Microsoft).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/hackathon.png" class="icon"><strong>Microsoft Global Hackathon</strong> – Winner across 3 tracks – Ability Hack, Seeing AI, and HackM365 for India for project "Dialog to Diagram" (Microsoft, Aug 2020).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/star.png" class="icon"><strong>People's Choice Award</strong> – Hackathon project to enhance profile view with live persona features and morale-boosting updates (Microsoft Norway, Spring 2020).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/thumb-up.png" class="icon"><strong>Microsoft Fix Hack Learn</strong> – Special Mention and Corporate VP Award for project "BePrePEERed" (Nov 2019).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/globe.png" class="icon"><strong>IBM Call for Code</strong> – Winner at the national level and Top 5 globally (IBM, 2019).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/student-male.png" class="icon"><strong>Best Outgoing Student</strong> – Department of Computer Science and Engineering, RVCE (May 2019).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/numbered-list.png" class="icon"><strong>Fourth Rank Holder</strong> – 4th rank out of 225 students at RVCE with a CGPA of 9.72 (May 2019).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/search.png" class="icon"><strong>Smart India Hackathon Finalist</strong> – Selected as Top 4 finalists for footfall detection problem (Govt of India, Mar 2019).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/prize.png" class="icon"><strong>Winner – IBM Mega Hackathon</strong> – For projects "MoodSeek" and "BollyBuff"; Best Girls' Team award (Nov 2018).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/audio-wave.png" class="icon"><strong>Best Experiential Project</strong> – For Intelligent Music Player and Smart Career Counseling (RVCE, May 2018).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/idea.png" class="icon"><strong>Winner – IBM IoT Hackathon</strong> – For project "Through Our Eyes" (RVCE Hacks, Jan 2018).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/award.png" class="icon"><strong>2nd Runner Up – Microsoft code.fun.do</strong> – Regional hackathon for "Vision Assist" (Jan 2018).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/project.png" class="icon"><strong>Best Experiential Project</strong> – For Smart Music Player (RVCE, Dec 2017).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/chip.png" class="icon"><strong>Best Microprocessor Mini Project</strong> – Department of CSE, RVCE (Nov 2017).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/engineer.png" class="icon"><strong>Microsoft Codess Program</strong> – Top contender through coding tests, ideathon, and interviews (May 2017).</li>
+    <li><img src="https://img.icons8.com/ios-filled/50/000000/certificate.png" class="icon"><strong>Certificate of Appreciation</strong> – For academic excellence, awarded by Smriti Irani, HRD Minister of India (May 2015).</li>
+  </ul>
+</section>
+
+  <section id = publications>
+<h2>Talks and Publications</h2>
+    <li><strong>IEEE: Intelligent Music Player Based on Emotion Recognition</strong> – Published in IEEE Xplore. Presented by Ramya Ramanathan. <a href="https://ieeexplore.ieee.org/document/9031028" target="_blank">Read full text</a></li>
+    <li><strong>IEEE: Post-Disaster Management using Satellite and Social Data</strong> – Published in IEEE. <a href="https://ieeexplore.ieee.org/document/9130515" target="_blank">Read full text</a></li>
+    <li><strong>IEEE: Comparative Study of Spark Schedulers</strong> – Best Paper Award. Presented by Ramya Ramanathan. <a href="https://ieeexplore.ieee.org/document/9287476" target="_blank">Read full text</a></li>
+    <li><strong>TMLR: InPars-light – Cost-effective Unsupervised Training of Efficient Rankers</strong> – Focused on scalable IR model development. <a href="https://arxiv.org/abs/2305.14036" target="_blank">Read full text</a></li>
+    <li><strong>National Conference on Leveraging Intelligent Transportation Systems</strong> – Presented research on "Scheduling Traffic Light System for Smart Traffic Management".</li>  
+</ul>
+  <p><strong>Google Scholar Metrics</strong>: Total Citations – 69 | h-index – 4 | i10-index – 3 <a href="https://scholar.google.com/citations?user=XMG602AAAAAJ&hl=en&oi=ao" target="_blank">View Profile</a></p>
+</section>
+</section>
+</section>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="experience-entry">
+    <div class="experience-text">
+      <p><strong>Carnegie Mellon University</strong><br/>
+      M.S. in Computational Data Science<br/>
+      2021 – 2023<br/>
+      <strong>GPA:</strong> 3.82/4.0<br/>
+      <strong>Relevant Coursework:</strong> Database Systems, Distributed Systems, Cloud Computing, Storage Systems, Machine Learning<br/>
+      <strong>Honors:</strong> GHC Sponsorship Award, Capstone Mentor's Choice Award</p>
+    </div>
+  </div>
+  <div class="experience-entry">
+    <div class="experience-text">
+      <p><strong>R.V. College of Engineering, Bangalore</strong><br/>
+      B.E. in Computer Science and Engineering<br/>
+      2015 – 2019<br/>
+      <strong>GPA:</strong> 9.72/10.0<br/>
+      <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Operating Systems, Database Management Systems, Microprocessors<br/>
+      <strong>Honors:</strong> Best Outgoing Student, 4th Rank in Department</p>
+    </div>
+  </div>
+</section>
+
+
+   <section id = "leadership">
+    <h2>Leadership and Volunteering</h2>
+    <li><strong>IEEE Student Poster Judge & Paper Reviewer</strong> – Reviewed technical papers and judged student research poster sessions for IEEE conferences, contributing to the academic community through expert evaluation and feedback.</li>
+    <li><strong>Hackathon Judge – UW Hacks, TechPals, AlgoArena</strong> – Judged multiple national and university-level hackathons, evaluating technical creativity, impact, and execution.</li>
+    <li><strong>Graduate Student Assembly – Carnegie Mellon University</strong> – Helped onboard incoming students and organized events to foster community within the School of Computer Science.</li>
+      <li><strong>Hackathon Organizer & Mentor – RVCE</strong> – Organized and mentored university-level hackathons, guiding juniors in full-stack and AI-based projects.</li>
+      <li><strong>Microsoft Codess Program</strong> – Selected as one of the top 8 participants among 3400 to represent women in engineering through competitive interviews and workshops.</li>
+      <li><strong>Head Girl – NCFE High School</strong> – Led initiatives, represented the student body, and was awarded by the HRD Minister for excellence in academics and leadership.</li>
+    <li><strong>Microsoft Give Fundraiser</strong> – Organized and hosted interactive quiz events to raise funds as part of Microsoft’s annual Give campaign, supporting global education and health initiatives.</li>
+    <li><strong>Grace Hopper Conference Sponsorship</strong> – Represented Carnegie Mellon University at GHC in person, selected among 10 students sponsored by the School of Computer Science (Sep 2022).</li>
+    <li><strong>Women in Tech & STEM Outreach</strong> – Actively engaged in mentoring and outreach programs encouraging women and students to pursue technology careers.</li>
+    <li><strong>Hackathon Organizer & Mentor</strong> – Volunteered time for organizing, mentoring, reviewing, and judging internal and public hackathons.</li>
+    <li><strong>Microsoft Codess Representative</strong> – Represented as a top finalist in events supporting gender equity in tech.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div style="font-size: 1.1rem; line-height: 2;">
+    <p><strong>Email:</strong> <a href="mailto:rmy1997@gmail.com">rmy1997@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ramya-28" target="_blank">linkedin.com/in/ramya-28</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/ramya-ramanathan-28" target="_blank">github.com/ramya-ramanathan-28</a></p>
+  </div>
+</section>
+
+  <div class="footer">
+    <p>© 2025 Ramya Ramanathan</p>
+  </div>
+</body>
+</html>
