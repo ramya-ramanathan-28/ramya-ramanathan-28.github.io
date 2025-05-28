@@ -3,248 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramya Ramanathan – Backend Engineer & Systems Developer</title>
+  <meta name="description" content="Portfolio of Ramya Ramanathan – Backend engineer specializing in distributed systems, database internals, and scalable infrastructure." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>  
-    body {
-      font-family: 'Inter', 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(90deg, #f8f9fc 0%, #f4f4f8 100%);
-      color: #2d2d2d;
-      line-height: 1.6;
-    }
-    nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem 6%;
-      background-color: #263145;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      color: white;
-    }
-    nav .nav-header {
-      position: relative;
-      width: 100%;
-      text-align: center;
-    }
-    nav .brand {
-      font-size: 1.8rem;
-      font-weight: 600;
-      text-align: center;
-    }
-    .hamburger {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin: 4px 0;
-      border-radius: 5px;
-    }
-    nav .links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 0.5rem;
-      width: 100%;
-    }
-    nav .links a {
-      margin: 0.25rem 1rem 0.25rem 0;
-      color: #aad8ff;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-    nav .links a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-      nav .links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 0.5rem;
-      }
-      nav .links.show {
-        display: flex;
-      }
-      nav .links a {
-        padding: 0.5rem 0;
-      }
-    }
-      body {
-        font-family: 'Inter', 'Segoe UI', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(90deg, #f8f9fc 0%, #f4f4f8 100%);
-        color: #2d2d2d;
-        line-height: 1.6;
-      }
-      nav {
-    flex-wrap: wrap;
-    font-size: 1.3rem;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        background-color: black;
-        background-color: #263145;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-      }
-      nav a {
-    display: inline-block;
-    margin: 0.5rem;
-        color: #aad8ff;
-        text-decoration: none;
-        margin: 0 1rem;
-      }
-      nav a:hover {
-    text-decoration: underline;
-        text-decoration: underline;
-      }
-      header {
-        background-color: #465775;
-        color: #ffffff;
-        padding: 2rem 1rem;
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-      header h1 {
-        font-size: 4rem;
-        font-weight: 700;
-      }
-      .pill-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-      }
-      .pill-group span {
-        background-color: #e0e4ec;
-        color: #2d2d2d;
-        padding: 0.4rem 0.9rem;
-        border-radius: 999px;
-        font-size: 0.9rem;
-      }
-      section {
-        padding: 3rem 6%;
-        background: #fff;
-        border-radius: 1rem;
-        margin: 2.5rem auto;
-        max-width: 1200px;
-        box-shadow: 0 4px 20px rgba(30, 90, 150, 0.15);
-      }
-      h2 {
-        color: #1d3557;
-        font-size: 2rem;
-        border-bottom: 2px solid #cfd8dc;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1.5rem;
-      }
-      .experience-entry {
-        border: 1px solid #e2e8f0;
-        border-radius: 0.75rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        background-color: #fdfdfd;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      }
-      .achievement-entry, .project-entry {
-        margin-bottom: 1rem;
-        padding-left: 0;
-        list-style: none;
-      }
-      .achievement-entry img.icon,
-      .project-entry img.icon, .hackathon-project-entry img.icon{
-        width: 18px;
-        height: 18px;
-        vertical-align: middle;
-        margin-right: 0.5rem;
-        filter: grayscale(100%) brightness(0%) sepia(100%) hue-rotate(180deg) saturate(400%) contrast(90%);
-      }
-      .footer {
-        background-color: #465775;
-        color: white;
-        text-align: center;
-        padding: 1.5rem;
-        font-size: 0.9rem;
-        margin-top: 2rem;
-      }
-      .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-      }
-      .project-entry{
-        border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1rem; margin: 1rem auto; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      }
-      html {
-          scroll-behavior: smooth;
-      }   
-    @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    nav div {
-      width: 100%;
-      margin-top: 0.5rem;
-    }
-    nav a {
-      display: block;
-      padding: 0.25rem 0;
-    }
-    header h1 {
-      font-size: 2.5rem;
-    }
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #f8f9fc 0%, #f4f4f8 100%);
+  color: #2d2d2d;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #263145;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+  font-size: 1.3rem;
+}
+
+nav .nav-header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+nav .brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+nav .links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+nav .links a,
+nav a {
+  color: #aad8ff;
+  text-decoration: none;
+  margin: 0.25rem 1rem;
+  font-size: 1.1rem;
+}
+
+nav .links a:hover,
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .hamburger span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin: 4px 0;
-      border-radius: 5px;
-    }
-    @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-      nav div.links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 1rem;
-      }
-      nav div.links a {
-        display: block;
-        padding: 0.5rem 0;
-      }
-      nav div.links.show {
-        display: flex;
-      }
-    }
+
+  nav .links,
+  nav div.links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  nav .links.show,
+  nav div.links.show {
+    display: flex;
+  }
+
+  nav .links a,
+  nav div.links a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+header {
+  background-color: #465775;
+  color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pill-group span {
+  background-color: #e0e4ec;
+  color: #2d2d2d;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+section {
+  padding: 3rem 6%;
+  background: #fff;
+  border-radius: 1rem;
+  margin: 2.5rem auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 20px rgba(30, 90, 150, 0.15);
+}
+
+h2 {
+  color: #1d3557;
+  font-size: 2rem;
+  border-bottom: 2px solid #cfd8dc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-entry,
+.project-entry {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.achievement-entry,
+.project-entry {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievement-entry img.icon,
+.project-entry img.icon,
+.hackathon-project-entry img.icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  filter: grayscale(100%) brightness(0%) sepia(100%) hue-rotate(180deg) saturate(400%) contrast(90%);
+}
+
+.footer {
+  background-color: #465775;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
   </style>
   </head>
   <body>
@@ -269,32 +226,18 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
-    <section id="about" style="scroll-margin-top: 120px; padding-left: 6%; padding-right: 6%;" style="scroll-margin-top: 120px;">
+  <section id="about" style="scroll-margin-top: 120px; padding-left: 6%; padding-right: 6%; scroll-margin-top: 120px;">
     <h2>About Me</h2>
     <p>I’m a passionate and hardworking backend engineer with a strong focus on building reliable, high-performance systems. I’ve worked across database internals, distributed infrastructure, and large-scale backend services, with hands-on experience in improving system performance, scalability, and stability. I hold a master’s degree from Carnegie Mellon University, where I specialized in database systems, distributed computing, and cloud computing. During my time at Microsoft, I contributed to core components of the SQL Server engine. I'm always eager to learn and grow as an engineer, and I care deeply about thoughtful design, technical depth, and building systems that last.</p>
   </section>
 
     <section id="skills">
     <h2>Skills</h2>
-    <style>
-      .pill-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-      }
-      .pill-group span {
-        background-color: #e0e4ec;
-        color: #2d2d2d;
-        padding: 0.4rem 0.9rem;
-        border-radius: 999px;
-        font-size: 0.9rem;
-      }
-    </style>
+
     <div>
       <h4>Languages</h4>
       <div class="pill-group">
-        <span>C++</span><span>C#</span></span><span>Go</span><span>Java</span><span>C</span><span>SQL</span><span>Python</span>
+        <span>C++</span><span>C#</span><span>Go</span><span>Java</span><span>C</span><span>SQL</span><span>Python</span>
       </div>
       <h4>Systems Technologies</h4>
       <div class="pill-group">
@@ -327,8 +270,6 @@
       </div>
     </div>
   </section>
-  </section>
-
     
 
 
@@ -406,13 +347,14 @@
 
   <section id="projects" style="text-align: center;">
     <h2>Selected Projects</h2>
-  <h3>Database & Storage Systems</h3>
+     <div class="project-group">
+    <h3>Database & Storage Systems</h3>
 
-      <div class="project-entry" style="border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1rem; margin: 1rem auto; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+      <div class="project-entry">
         <p><img src="https://img.icons8.com/ios-filled/50/000000/brain.png" alt="Brain" class="icon"><strong>BusTub Database</strong> – Disk-based DBMS with buffer pool manager, LRU-K eviction, and optimizer rules.<br/>
         <em>Skills:</em> C++, Database Internals, Storage Design</p>
       </div>
-      <div class="project-entry" style="border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1rem; margin: 1rem auto; max-width: 700px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
+      <div class="project-entry">
         <p><img src="https://img.icons8.com/ios-filled/50/000000/flash-on.png" alt="Flash" class="icon"><strong>Flash Translation Layer</strong> – SSD manager with wear leveling, mapping, and garbage collection.<br/>
         <em>Skills:</em> Storage Systems, C++, SSD Optimization</p>
       </div>
@@ -420,6 +362,7 @@
     <p><img src="https://img.icons8.com/ios-filled/50/000000/database.png" alt="Database" class="icon">
     <strong>Cab Matching with Kafka & Samza</strong> – Stream-processed driver and client location data to identify optimal matches based on proximity and ratings.<br/>
     <em>Skills:</em> Kafka, Apache Samza, Stream Processing, Matching Algorithms</p>
+  </div>
   </div>
     <div class="project-group">
       <h3>Distributed Systems</h3>
@@ -435,9 +378,6 @@
         <p><img src="https://img.icons8.com/ios-filled/50/000000/satellite.png" alt="Satellite" class="icon"><strong>Distributed Task Scheduler</strong> – Reliable UDP protocol and distributed task load balancer.<br/>
         <em>Skills:</em> Networking, Concurrency, Scheduling, Systems Programming</p>
       </div>
-    </div>
-    <div class="project-group">
-      
     </div>
 
     <div class="project-group">
@@ -470,7 +410,7 @@
       <li><img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png" alt="Search" class="icon"><strong>Through Our Eyes – Microsoft code.fun.do</strong>: Designed an immersive visual accessibility tool. Placed 3rd regionally.</li>
       
     </ul>
-    </section>
+  </section>
   <section id="achievements">
     <h2>Achievements</h2>
     <ul class="achievement-entry" style="list-style: none; padding-left: 0;">
@@ -504,8 +444,9 @@
     </ul>
   </section>
 
-    <section id = publications>
+  <section id = "publications">
   <h2>Talks and Publications</h2>
+  <ul>
       <li><strong>IEEE: Intelligent Music Player Based on Emotion Recognition</strong> – Published in IEEE Xplore. Presented by Ramya Ramanathan. <a href="https://ieeexplore.ieee.org/document/9031028" target="_blank">Read full text</a></li>
       <li><strong>IEEE: Post-Disaster Management using Satellite and Social Data</strong> – Published in IEEE. <a href="https://ieeexplore.ieee.org/document/9130515" target="_blank">Read full text</a></li>
       <li><strong>IEEE: Comparative Study of Spark Schedulers</strong> – Best Paper Award. Presented by Ramya Ramanathan. <a href="https://ieeexplore.ieee.org/document/9287476" target="_blank">Read full text</a></li>
@@ -513,9 +454,6 @@
       <li><strong>National Conference on Leveraging Intelligent Transportation Systems</strong> – Presented research on "Scheduling Traffic Light System for Smart Traffic Management".</li>  
   </ul>
     <p><strong>Google Scholar Metrics</strong>: Total Citations – 69 | h-index – 4 | i10-index – 3 <a href="https://scholar.google.com/citations?user=XMG602AAAAAJ&hl=en&oi=ao" target="_blank">View Profile</a></p>
-  </section>
-  </section>
-  </section>
   </section>
 
   <section id="education">
@@ -544,6 +482,7 @@
 
 
     <section id = "leadership">
+      <ul>
       <h2>Leadership and Volunteering</h2>
       <li><strong>IEEE Student Poster Judge & Paper Reviewer</strong> – Reviewed technical papers and judged student research poster sessions for IEEE conferences, contributing to the academic community through expert evaluation and feedback.</li>
       <li><strong>Hackathon Judge – UW Hacks, TechPals, AlgoArena</strong> – Judged multiple national and university-level hackathons, evaluating technical creativity, impact, and execution.</li>
